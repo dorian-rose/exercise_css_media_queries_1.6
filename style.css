@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container,
+.grid-container {
+  width: 98%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+main > * {
+  margin: 20px;
+}
+.grid-container {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-container > * {
+  padding: 50px;
+  border: 1px solid grey;
+}
+
+.bg-dark {
+  background-color: black;
+  color: aliceblue;
+}
+
+/*============================
+768 px
+===============================*/
+@media screen and (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/*============================
+992 px
+===============================*/
+@media screen and (min-width: 992px) {
+  .container {
+    width: 80%;
+  }
+  .grid-container.tres {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid-container.cuatro {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+/*============================
+1200px
+===============================*/
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
